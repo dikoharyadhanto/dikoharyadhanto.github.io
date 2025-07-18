@@ -1,0 +1,430 @@
+body {
+  margin: 0;
+  background-color: #f5f5f5;
+}
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  z-index: 9999;
+  background-color: #040404;
+}
+nav .logo {
+  font-size: 1.75rem;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.logo a {
+  color: white;
+  text-decoration: none;
+}
+.navbar-nav {
+}
+
+.navbar-nav .nav-item a {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.025rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+  position: relative;
+}
+.navbar-nav li {
+  padding: 10px 0 10px 30px;
+}
+.navbar-nav li .active {
+  position: relative;
+}
+.navbar-nav li .active::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  height: 2px;
+  background-color: white;
+}
+
+/* Initial state of the underline */
+.navbar-nav .nav-item > a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+/* Animate on hover */
+.navbar-nav .nav-item:hover > a::before {
+  transform: scaleX(1);
+}
+
+.hero {
+  height: 100vh;
+  background-image: url(./imgs/hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.hero .title {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .title h1 {
+  font-size: 4.5rem;
+  line-height: 5.4rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: white;
+}
+.hero .title h2 {
+  font-size: 2.5rem;
+  line-height: 3.75rem;
+  font-weight: 600;
+  color: white;
+}
+.hero .title h2::before {
+  content: "";
+  animation: typeWords 8s infinite;
+  overflow: hidden;
+}
+.hero .title h2::after {
+  content: "|";
+  animation: blink 1s step-start infinite;
+  display: inline-block;
+  margin-left: 2px;
+}
+.hero .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+}
+
+@keyframes typeWords {
+  0% {
+    content: "";
+  }
+  2% {
+    content: "D";
+  }
+  4% {
+    content: "De";
+  }
+  6% {
+    content: "Des";
+  }
+  8% {
+    content: "Desi";
+  }
+  10% {
+    content: "Desig";
+  }
+  12% {
+    content: "Design";
+  }
+  14% {
+    content: "Designe";
+  }
+  16% {
+    content: "Designer";
+  }
+  20% {
+    content: "Designer";
+  }
+  22% {
+    content: "Designe";
+  }
+  24% {
+    content: "Design";
+  }
+  26% {
+    content: "Desig";
+  }
+  28% {
+    content: "Desi";
+  }
+  30% {
+    content: "Des";
+  }
+  32% {
+    content: "De";
+  }
+  34% {
+    content: "D";
+  }
+  36% {
+    content: "";
+  }
+
+  38% {
+    content: "P";
+  }
+  40% {
+    content: "Ph";
+  }
+  42% {
+    content: "Pho";
+  }
+  44% {
+    content: "Phot";
+  }
+  46% {
+    content: "Photo";
+  }
+  48% {
+    content: "Photog";
+  }
+  50% {
+    content: "Photogr";
+  }
+  52% {
+    content: "Photogra";
+  }
+  54% {
+    content: "Photograp";
+  }
+  56% {
+    content: "Photograph";
+  }
+  58% {
+    content: "Photographe";
+  }
+  60% {
+    content: "Photographer";
+  }
+  64% {
+    content: "Photographer";
+  }
+  66% {
+    content: "Photographe";
+  }
+  68% {
+    content: "Photograph";
+  }
+  70% {
+    content: "Photograp";
+  }
+  72% {
+    content: "Photogra";
+  }
+  74% {
+    content: "Photogr";
+  }
+  76% {
+    content: "Photog";
+  }
+  78% {
+    content: "Photo";
+  }
+  80% {
+    content: "";
+  }
+
+  82% {
+    content: "D";
+  }
+  84% {
+    content: "De";
+  }
+  86% {
+    content: "Dev";
+  }
+  88% {
+    content: "Deve";
+  }
+  90% {
+    content: "Devel";
+  }
+  92% {
+    content: "Develo";
+  }
+  94% {
+    content: "Develop";
+  }
+  96% {
+    content: "Develope";
+  }
+  98% {
+    content: "Developer";
+  }
+  102% {
+    content: "Developer";
+  }
+  104% {
+    content: "Develope";
+  }
+  106% {
+    content: "Develop";
+  }
+  108% {
+    content: "Develo";
+  }
+  110% {
+    content: "Devel";
+  }
+  112% {
+    content: "Deve";
+  }
+  114% {
+    content: "Dev";
+  }
+  116% {
+    content: "De";
+  }
+  118% {
+    content: "";
+  }
+
+  120% {
+    content: "F";
+  }
+  122% {
+    content: "Fr";
+  }
+  124% {
+    content: "Fre";
+  }
+  126% {
+    content: "Free";
+  }
+  128% {
+    content: "Freel";
+  }
+  130% {
+    content: "Freela";
+  }
+  132% {
+    content: "Freelan";
+  }
+  134% {
+    content: "Freelanc";
+  }
+  136% {
+    content: "Freelance";
+  }
+  138% {
+    content: "Freelancer";
+  }
+  142% {
+    content: "Freelancer";
+  }
+  144% {
+    content: "Freelance";
+  }
+  146% {
+    content: "Freelanc";
+  }
+  148% {
+    content: "Freelan";
+  }
+  150% {
+    content: "Freela";
+  }
+  152% {
+    content: "Freel";
+  }
+  154% {
+    content: "Free";
+  }
+  156% {
+    content: "Fre";
+  }
+  158% {
+    content: "Fr";
+  }
+  160% {
+    content: "F";
+  }
+  162% {
+    content: "";
+  }
+}
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+#about {
+  padding-top: 4rem;
+}
+.about {
+  padding-top: 4rem;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 1px 0px,
+    rgba(0, 0, 0, 0.2) 0px 2px 5px 0px;
+}
+.about .content h2 {
+  font-size: 2.125rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+  color: #1e1e1e;
+  margin-bottom: 1.25rem;
+  margin-top: 0.3125rem;
+  position: relative;
+}
+.about .content h2::after {
+  content: "";
+  position: absolute;
+  height: 0.2rem;
+  width: 6.25rem;
+  background-color: #0078ff;
+  bottom: -0.625rem;
+  left: 0;
+}
+.about .content p {
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  font-weight: 300;
+  color: #4e4e4e;
+}
+.about .caption span {
+  font-size: 1.1rem;
+  line-height: 1.65rem;
+  font-weight: 600;
+  color: #1e1e1e;
+}
+.about .caption {
+  padding: 0.75rem 0.75rem;
+}
+.about .caption h3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: #4e4e4e;
+  padding: 0.3125rem;
+}
+.about .progress-p h2 {
+  font-size: 1.1rem;
+  line-height: 1.65rem;
+  font-weight: 600;
+  color: #1e1e1e;
+}
+.about .progress {
+  margin-top: 0.5rem;
+  margin-bottom: 1.1875rem;
+}
+
+#services h1 {
+  font-size: 3rem;
+}
